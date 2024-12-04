@@ -126,6 +126,7 @@ header nav .sign {
   margin: 1rem;
 }
 .join form button {
+  border: none;
   background-color: rgb(229, 9, 20);
   font-size: 3rem;
   padding: 1.5rem 6rem;
@@ -175,9 +176,9 @@ header nav .sign {
   font-size: 2rem;
 }
 .trending .suggestion {
-  max-width: 80vw;
+  max-width: 110%;
   display: flex;
-  justify-content: center;
+  overflow-x: scroll;
 }
 .trending .suggestion .img {
   display: flex;
@@ -204,7 +205,7 @@ header nav .sign {
   -webkit-text-stroke: 2px white;
   font-weight: 1000; /* Make the text bold */
   color: rgb(0, 0, 0); /* Text color */
-  z-index: 1;
+  z-index: 0;
 }
 .trending .reason {
   width: 95%;
@@ -437,13 +438,21 @@ footer p {
 /* For changing complete layout. */
 
 @media (max-width: 945px) {
+  header nav button.translate p {
+    display: none;
+  }
+  header nav button.translate i{
+    font-size: 2rem;
+  }
   .non-blured h1 {
     font-size: 3.2rem;
   }
   .non-blured p {
     font-size: 2rem;
   }
-
+  .join p {
+    font-size: 1.7vh;
+  }
   .trending header {
     display: flex;
     flex-direction: column;
@@ -477,6 +486,12 @@ footer p {
   footer ul li{
     font-size: 1.8rem;
   }
+  .questions ul li {
+    font-size: 1.8rem;
+  }
+  .questions ul li span {
+    font-size: 2rem;
+  }
 }
 
 /* For changing font-size */
@@ -491,9 +506,19 @@ footer p {
     flex-direction: column;
   }
   .join form button {
-    font-size: 2.5rem;
+    font-size: 3vh;
     padding: 1rem 1rem;
-    height: 5rem;
-    width: 14.8rem;
+    height: 5vh;
+    width: 17.8vh;
+  }
+}
+
+/* For changing font-size */
+@media (max-width: 500px) {
+  .non-blured h1 {
+    font-size: 1.8rem;
+  }
+  .non-blured p {
+    font-size: 1rem;
   }
 }
